@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+
+    <!-- 1. 부트스트랩 - 다운로드 - 복사/붙여넣기 -->
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
+    />
+
+    <!-- 부가적인 테마 -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"
+    />
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <!-- 4. css/index.css 연결하기 -->
+    <link rel='stylesheet', href={{ url_for('static',
+    filename='css/index.css')}}>
+  </head>
+  <body>
+    <div id="warp">
+      <div>
+        <div class="news">
+          <form action="/result" method="POST">
+            <div class="form-group">
+              <h1>키워드 입력</h1>
+              <label for="exampleInputEmail1">크롤링 키워드</label>
+              <input
+                type="text"
+                class="form-control"
+                name="input1"
+                placeholder="키워드를 입력해주세요"
+              />
+            </div>
+            <div class="form-group">
+              <h1>페이지 입력</h1>
+              <label for="exampleInputPassword1">페이지 수</label>
+              <input
+                type="number"
+                class="form-control"
+                name="input2"
+                placeholder="페이지 수를 입력해주세요"
+              />
+            </div>
+            <button type="submit" class="btn btn-default">제출</button>
+          </form>
+        </div>
+      </div>
+      <div>
+        <div class="naver">
+          <form action="/naver_shopping" method="POST">
+            <h1>네이버 쇼핑크롤링</h1>
+            <div class="form-group">
+              <input type="text" name="input3" class="form-control" />
+            </div>
+            <button class="btn btn-default">네이버 쇼핑 크롤링 셀레니움</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
